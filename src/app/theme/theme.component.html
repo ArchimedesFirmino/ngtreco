@@ -6,17 +6,15 @@
 
 
   <nav>
-    <a routerLink="/home">Inicio</a>
-    <a routerLink="/contacts">Contatos</a>
+    <a routerLink="/home">Inicio</a> &nbsp;
+    <a routerLink="/contacts">Contatos</a> &nbsp;
     <a routerLink="/about">Sobre</a>
   </nav>
-
-  <router-outlet></router-outlet>
-
+  <div id="content">
+    <router-outlet></router-outlet>
+  </div>
+  
   <footer>
     &copy; 2023 Eu mesmo.
   </footer>
 </div>
-
-
-

@@ -1,3 +1,8 @@
-h1{
-  text-decoration: underline;
+#wrap{
+  position: relative;
+  height: 100%;
+}
+#content{
+  flex-grow: 1;
+  background-color: white;
 }
