@@ -10,3 +10,16 @@
   </ul>
 
 </div>
+
+<aside>
+  <div *ngIf="articlesView">
+    <h3>+ Visitados</h3>
+    <ul>
+      <li *ngFor="let articleView of articlesView">
+        <a routerLink="/view/{{articleView.id}}">
+          {{articleView.title}}
+        </a>
+      </li>
+    </ul>
+  </div>
+</aside>
