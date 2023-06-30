@@ -1,25 +1,25 @@
-<div *ngIf="articles">
-
-  <ul>
-    <li *ngFor="let article of articles">
-      <a routerLink="/view/{{article.id}}">
-          {{article.title}}
-      </a>
-    </li>
-
-  </ul>
-
-</div>
-
-<aside>
-  <div *ngIf="articlesView">
-    <h3>+ Visitados</h3>
+<main>
+  <article *ngIf="articles">
     <ul>
-      <li *ngFor="let articleView of articlesView">
-        <a routerLink="/view/{{articleView.id}}">
-          {{articleView.title}}
+      <li *ngFor="let article of articles">
+        <a routerLink="/view/{{article.id}}">
+          {{article.title}}
         </a>
       </li>
     </ul>
-  </div>
-</aside>
+
+  </article>
+
+  <aside>
+    <div *ngIf="articlesView">
+      <h3>+ Visitados</h3>
+      <ul>
+        <li *ngFor="let articleView of articlesView">
+          <a routerLink="/view/{{articleView.id}}">
+            {{articleView.title}}
+          </a>
+        </li>
+      </ul>
+    </div>
+  </aside>
+</main>
