@@ -1,0 +1,7 @@
+{
+  "name": "ngtreco",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
