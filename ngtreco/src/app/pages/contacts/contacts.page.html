@@ -3,30 +3,44 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>Faça Contato</ion-title>
+    <ion-title class="ion-text-center">Faça Contato</ion-title>
+    <ion-icon name="chatbubbles" size="large" class="ion-margin" slot="end"></ion-icon>
   </ion-toolbar>
 </ion-header>
-
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Faça Contato</ion-title>
+      <ion-title asize="large">Faça Contato</ion-title>
     </ion-toolbar>
   </ion-header>
 
-<div class="ion-padding">
+  <div class="ion-padding">
 
-  <p>Preencha todos os campos abaixo para entrar em contanto com a equipe do {{env.appName}}</p>
+    <p>Preencha todos os campos abaixo para entrar em contato com a equipe do <em>{{ env.appName }}</em>.</p>
 
-  <form>
-<p>
-  <label for="name">Nome:</label>
-  <input type="text">
-</p>
+    <div *ngIf="!success">
+        <p>
+          <ion-input label="Nome:" [(ngModel)]="contact.name" label-placement="floating" fill="outline"
+            placeholder="Digite seu nome" required minlength="3" errorText="Nome inválido."></ion-input>
+        </p>
+        <p>
+          <ion-input label="E-mail:" inputmode="numeric" label-placement="floating" fill="outline"
+            placeholder="Digite seu e-mail" [(ngModel)]="contact.email" required email></ion-input>
+        </p>
+        <p>
+          <ion-input label="Assunto:" label-placement="floating" fill="outline"
+            placeholder="Digite o assunto do contato" [(ngModel)]="contact.subject" required minlength="3"></ion-input>
+        </p>
+        <p>
+          <ion-textarea label="Mensagem:" [autoGrow]="true" labelPlacement="floating" fill="outline"
+            placeholder="Mensagem do contato" [(ngModel)]="contact.message" required minlength="5"></ion-textarea>
+        </p>
+        <p>
+          <ion-button (click)="submitForm()">Enviar</ion-button>
+        </p>
+    </div>
 
-  </form>
-</div>
-
+  </div>
 
 </ion-content>

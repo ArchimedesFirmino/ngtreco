@@ -10,23 +10,17 @@ import { HttpClient } from '@angular/common/http';
 export class HomePage implements OnInit {
 
   public env = environment;
-  articles: any;
 
-  constructor(private http: HttpClient) {
-    this.getArticles();
+  constructor(
+    private http: HttpClient
+  ) { }
+
+  ngOnInit() {
+    this.http.get(environment.apiURL + '/articles').subscribe((response) => {
+      console.log('Todos os artigos:', response);
+    }, (error) => {
+      console.error(error)
+    })
   }
-
-  ngOnInit() {}
-  getArticles() {
-    this.http.get(environment.apiURL + '/artigos')
-      .subscribe((response) => {
-      this.articles = response;
-      console.log(response);
-
-    }
-      )
-  }
-
-
 
 }

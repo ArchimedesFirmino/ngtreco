@@ -5,11 +5,12 @@ export const environment = {
   apiURL: 'http://localhost:8080',
   authMethod: 'redirect',
   firebase: {
-    apiKey: "AIzaSyBHQJBs0pe_Yc17MBSqAGI5OUbigAGGHGs",
-    authDomain: "frontendeiros-archimedes.firebaseapp.com",
-    projectId: "frontendeiros-archimedes",
-    storageBucket: "frontendeiros-archimedes.appspot.com",
-    messagingSenderId: "482807980306",
-    appId: "1:482807980306:web:0401641f775699d85493cb"
+    apiKey: 'AIzaSyBicr7VwgcQfN5aclocvQ846BN4Z2k7NH0',
+    authDomain: 'frontendeiros2.firebaseapp.com',
+    databaseURL: 'https://frontendeiros2-default-rtdb.firebaseio.com',
+    projectId: 'frontendeiros2',
+    storageBucket: 'frontendeiros2.appspot.com',
+    messagingSenderId: '933890671722',
+    appId: '1:933890671722:web:7ade7d8b3161ce39d93613'
   }
 };
